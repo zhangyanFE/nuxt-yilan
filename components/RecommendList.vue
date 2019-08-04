@@ -8,9 +8,9 @@
                 ref="listItem"
                 :videoid="`${item.video_id}`"
                 @click="handleJumpList(item, index)">
+                <!-- 广告位 -->
+                <ad-list :idx="index" />
                   <a :href="`/Brawn/general.html?id=${item.video_id}&preid=${item.video_id}&access_key=`" target="_blank">
-                      <!-- 广告位 -->
-                      <!-- <ad-list :idx="index" :adList="recommendList" /> -->
                       <div class="list-item">
                         <template v-if="!listStyle">
                             <div class="list-item-left">
@@ -58,7 +58,7 @@ import { mapState } from 'vuex';
 //   envVariable
 // } from "@/lib/util";
 // import Url from "@/lib/url";
-// import AdList from "@/components/AdList";
+import AdList from "~/components/AdList";
 
 export default {
   name: "recommendList",
@@ -84,7 +84,7 @@ export default {
     }
   },
   components: {
-    // AdList
+    AdList
   },
   computed: {
         ...mapState({

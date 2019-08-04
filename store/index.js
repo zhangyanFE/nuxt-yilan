@@ -13,7 +13,7 @@ const store = () => new Vuex.Store({
         commit
       }, {req, app}) {
         let params = {
-            id: 'r1yob6eOk5Lo',
+            id: 'zvyOb0NwX5m7',
             access_key: 'yluyh22n5kdq',
             udid: '41a0fa2489927292dd17aac2787ebd15',
             uid: '1',

@@ -1,6 +1,7 @@
 <template>
     <div class="wrapper">
         <VideoPlayer />
+        <VideoInfo />
         <div class="recommend-container">
             <RecommendList>
                 <RecommendTitle />
@@ -13,6 +14,7 @@
 // import { getUdid, getUid } from '~/assets/utils';
 import { mapState } from 'vuex';
 import VideoPlayer from '~/components/VideoPlayer';
+import VideoInfo from '~/components/VideoInfo';
 import RecommendTitle from '~/components/RecommendTitle';
 import RecommendList from '~/components/RecommendList';
 
@@ -24,6 +26,7 @@ export default {
     },
     components: {
         VideoPlayer,
+        VideoInfo,
         RecommendTitle,
         RecommendList
     },

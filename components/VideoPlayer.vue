@@ -34,7 +34,7 @@ export default {
         container: document.getElementById('J_ylplayer'),
         preload: 'auto',
         trackLogParams: {
-          videoId: 'r1yob6eOk5Lo'
+          videoId: 'zvyOb0NwX5m7'
         },
         video: {
           url: this.videoSource[2].uri,
