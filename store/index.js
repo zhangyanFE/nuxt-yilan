@@ -20,6 +20,7 @@ const store = () => new Vuex.Store({
         }
         
         try {
+          // 播放接口
           const {
             status,
             data: {
@@ -28,8 +29,20 @@ const store = () => new Vuex.Store({
           } = await app.$axios.get('/play/video', {
             params
           })
-          if(status === 200) {
+
+          // 推荐接口
+          const {
+            status: status2,
+            data: {
+              data
+            }
+          } = await app.$axios.get('/play/recommendlist', {
+            params
+          })
+
+          if(status === 200 || status2 === 200) {
             commit('play/setList', bitrates);
+            commit('play/setRecommendList', data);
           }
         } catch (error) {
           console.log(error)
