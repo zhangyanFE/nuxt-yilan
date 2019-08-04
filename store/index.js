@@ -12,23 +12,28 @@ const store = () => new Vuex.Store({
       async nuxtServerInit({
         commit
       }, {req, app}) {
-        const {
-          status,
-          data: {
-            
+        let params = {
+            id: 'r1yob6eOk5Lo',
+            access_key: 'yluyh22n5kdq',
+            udid: '41a0fa2489927292dd17aac2787ebd15',
+            uid: '1',
+        }
+        
+        try {
+          const {
+            status,
+            data: {
+              bitrates
+            }
+          } = await app.$axios.get('/play/video', {
+            params
+          })
+          if(status === 200) {
+            commit('play/setList', bitrates);
           }
-        } = await app.$axios.get('/play/video', {
-          age: '2000'
-        })
-        // commit('geo/setPosition',status===200?{city,province}:{city:'',province:''})
-        // const {status:status2,data:{menu}}=await app.$axios.get('geo/menu')
-        // commit('home/setMenu',status2===200?menu:[])
-        // const {status:status3,data:{result}}=await app.$axios.get('/search/hotPlace',{
-        //   params:{
-        //     city:app.store.state.geo.position.city.replace('市','')
-        //   }
-        // })
-        // commit('home/setHotPwlace',status3===200?result:[])
+        } catch (error) {
+          console.log(error)
+        }
       }
     }
   })
