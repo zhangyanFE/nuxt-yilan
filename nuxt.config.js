@@ -14,7 +14,17 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, {
+      rel: 'stylesheet',
+      href: 'https://static.yilan.tv/Transformers/Brawn/ylplayer/ylplayer.min.css'
+    }],
+    script: [{
+      src: 'https://static.yilan.tv/Transformers/Brawn/ylplayer/rem.js',
+      type: 'text/javascript'
+    }, {
+      src: 'https://static.yilan.tv/Transformers/Brawn/ylplayer/ylplayer.min.js',
+      type: 'text/javascript'
+    }]
   },
   /*
    ** Customize the progress-bar color
@@ -33,7 +43,7 @@ module.exports = {
    */
   devModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    // '@nuxtjs/eslint-module'
   ],
   /*
    ** Nuxt.js modules

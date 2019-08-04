@@ -1,8 +1,19 @@
 const Koa = require('koa')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
+const bodyParser = require('koa-bodyparser');
+const json = require('koa-json');
+const play = require('./interface/play');
+
 
 const app = new Koa()
+
+app.proxy = true
+app.use(bodyParser({
+  extendTypes:['json','form','text']
+}))
+app.use(json())
+
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
@@ -24,6 +35,9 @@ async function start() {
   } else {
     await nuxt.ready()
   }
+  
+  // Node controller-router
+  app.use(play.routes()).use(play.allowedMethods())
 
   app.use((ctx) => {
     ctx.status = 200
