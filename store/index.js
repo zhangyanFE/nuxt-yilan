@@ -40,9 +40,16 @@ const store = () => new Vuex.Store({
             params
           })
 
-          if(status === 200 || status2 === 200) {
+          // 广告接口
+          const { status: status3, data: { result } } = await app.$axios.get('/play/h5ad', {
+            params
+          })
+          
+          console.log(result)
+          if(status === 200 || status2 === 200 || status3 === 200) {
             commit('play/setList', bitrates);
             commit('play/setRecommendList', data);
+            commit('play/setAdInfo', result);
           }
         } catch (error) {
           console.log(error)

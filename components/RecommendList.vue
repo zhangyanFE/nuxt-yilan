@@ -108,7 +108,6 @@ export default {
     }
   },
   created() {
-      console.log(this.recommendList)
     // this.init();
   },
   methods: {
@@ -247,6 +246,7 @@ $rem: 75;
         height: conver(70); */
         width: 120px;
         height: 68px;
+        background: #f3f3f3;
         position: relative;
         margin-right: conver(10);
         &.general-l {

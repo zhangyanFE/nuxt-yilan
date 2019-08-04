@@ -1,15 +1,19 @@
 <template>
     <div class="wrapper">
-        <!-- <ul>
-            <li v-for="item in recommendList" :key="item.title">{{ item.title }}</li>
-        </ul> -->
-        <RecommendList />
+        <VideoPlayer />
+        <div class="recommend-container">
+            <RecommendList>
+                <RecommendTitle />
+            </RecommendList>
+        </div>
     </div>
 </template>
 
 <script>
 // import { getUdid, getUid } from '~/assets/utils';
 import { mapState } from 'vuex';
+import VideoPlayer from '~/components/VideoPlayer';
+import RecommendTitle from '~/components/RecommendTitle';
 import RecommendList from '~/components/RecommendList';
 
 export default {
@@ -19,11 +23,17 @@ export default {
         }
     },
     components: {
+        VideoPlayer,
+        RecommendTitle,
         RecommendList
     },
     head() {
         return {
             title: `播放页面`,
+            meta: [{
+                name: 'spm-id',
+                content: '10047'
+            }]
         }
     },
     computed: {

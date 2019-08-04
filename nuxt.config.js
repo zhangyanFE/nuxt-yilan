@@ -7,14 +7,18 @@ module.exports = {
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        'http-equiv': 'X-UA-Compatible',
+        'content': 'IE=edge'
+      },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
       {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, {
+    link: [{ rel: 'shortcut icon', type: 'image/x-icon', href: 'https://static.yladm.com/image/favicon.ico' }, {
       rel: 'stylesheet',
       href: 'https://static.yilan.tv/Transformers/Brawn/ylplayer/ylplayer.min.css'
     }],
@@ -25,6 +29,9 @@ module.exports = {
       src: 'https://static.yilan.tv/Transformers/Brawn/ylplayer/ylplayer.min.js',
       type: 'text/javascript'
     }]
+  },
+  server: {
+    host: '0.0.0.0'
   },
   /*
    ** Customize the progress-bar color
