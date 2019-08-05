@@ -60,7 +60,7 @@ router.get('/recommendlist', async (ctx) => {
 // 广告接口
 router.get('/h5ad', async (ctx) => {
     const { access_key, id, udid, uid } = ctx.query;
-    console.log('广告接口===> ：\n', ctx.query);
+    // console.log('广告接口===> ：\n', ctx.query);
     let params = {
         vid: id,
         access_key,

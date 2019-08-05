@@ -18,20 +18,12 @@ module.exports = {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'shortcut icon', type: 'image/x-icon', href: 'https://static.yladm.com/image/favicon.ico' }, {
-      rel: 'stylesheet',
-      href: 'https://static.yilan.tv/Transformers/Brawn/ylplayer/ylplayer.min.css'
-    }],
-    script: [{
-      src: 'https://static.yilan.tv/Transformers/Brawn/ylplayer/rem.js',
-      type: 'text/javascript'
-    }, {
-      src: 'https://static.yilan.tv/Transformers/Brawn/ylplayer/ylplayer.min.js',
-      type: 'text/javascript'
-    }]
+    link: [{ rel: 'shortcut icon', type: 'image/x-icon', href: 'https://static.yladm.com/image/favicon.ico' }],
+    script: []
   },
   server: {
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    port: 3001
   },
   /*
    ** Customize the progress-bar color

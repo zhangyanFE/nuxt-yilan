@@ -3,7 +3,7 @@ import request from './request';
 
 const openapisUrl = 'https://openapis.yladm.com';
 
-const API = {
+export const API = {
     playVideoApi(data) {
         let req = data;
         const timestamp = new Date() * 1;
@@ -45,7 +45,7 @@ const API = {
     openH5AdApi(data) {
         let req = data;
         const timestamp = new Date() * 1;
-        const { access_key, vid, udid, uid } = data;
+        const { access_key, id: vid, udid, uid } = data;
         let signData = {
             access_key,
             timestamp,
@@ -57,6 +57,7 @@ const API = {
         }
         let getsign = Autograph(signData);
         req.sign = getsign;
+        req.vid = vid;
         req.timestamp = timestamp;
         req.udid = udid;
         req.uid = uid;

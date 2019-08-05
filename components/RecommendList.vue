@@ -10,7 +10,7 @@
                 @click="handleJumpList(item, index)">
                 <!-- 广告位 -->
                 <ad-list :idx="index" />
-                  <a :href="`/Brawn/general.html?id=${item.video_id}&preid=${item.video_id}&access_key=`" target="_blank">
+                  <a :href="`/play?id=${item.video_id}&preid=${item.video_id}&access_key=`">
                       <div class="list-item">
                         <template v-if="!listStyle">
                             <div class="list-item-left">
@@ -188,9 +188,6 @@ $rem: 75;
 .recommend-box {
   background: #ffffff;
   padding: 0 conver(15);
-  &.top {
-    /* margin-top: conver(290); */
-  }
   .recommend-list {
     .list-item-box {
       &:first-child {
@@ -234,8 +231,6 @@ $rem: 75;
         span {
           font-family: "PingFangSC-Regular";
           font-size: conver(12);
-        }
-        .domain-name {
         }
         .domain-playnum {
           padding-left: conver(13);

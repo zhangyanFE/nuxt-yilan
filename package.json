@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "dev2": "nuxt",
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
     "dev-server": "./node_modules/.bin/json-server --watch assets/db.json --port 3333",
     "build": "nuxt build",
