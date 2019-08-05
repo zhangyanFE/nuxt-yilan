@@ -147,3 +147,19 @@ export function platForm() {
         return "PC"
     }
 }
+
+//数组去重
+export function distinctArr(arr) {
+    var
+        i,
+        obj = {},
+        result = [],
+        len = arr.length;
+    for (i = 0; i < len; i++) {
+        if (!obj[arr[i]]) { //如果能查找到，证明数组元素重复了
+            obj[arr[i]] = 1;
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}

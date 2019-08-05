@@ -10,7 +10,7 @@
                 @click="handleJumpList(item, index)">
                 <!-- 广告位 -->
                 <ad-list :idx="index" />
-                  <a :href="`/play?id=${item.video_id}&preid=${item.video_id}&access_key=`">
+                  <a :href="`/play?id=${item.video_id}&preid=${item.video_id}&access_key=ylb83s68tq12`">
                       <div class="list-item">
                         <template v-if="!listStyle">
                             <div class="list-item-left">
