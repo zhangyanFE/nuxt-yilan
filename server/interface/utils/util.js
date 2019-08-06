@@ -81,13 +81,17 @@ export function setCookie(cName, value) {
     let Days = 300
     let exp = new Date()
     exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
-    // document.cookie = cName + '=' + escape(value) + ';expires=' + exp.toGMTString()
+    if(process.browser) {
+        document.cookie = cName + '=' + escape(value) + ';expires=' + exp.toGMTString()
+    }
 }
 
 export function getCookie(name) {
     let arr
     let reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)')
-    // arr = document.cookie.match(reg)
+    if(process.browser) {
+        arr = document.cookie.match(reg)
+    }
 
     if (arr) {
         return (arr[2])
@@ -163,3 +167,4 @@ export function distinctArr(arr) {
     }
     return result;
 }
+console.log(getCookie('yl_uid'))

@@ -17,6 +17,7 @@
   "dependencies": {
     "@nuxtjs/axios": "^5.5.4",
     "axios": "^0.19.0",
+    "cookie-universal-nuxt": "^2.0.17",
     "cross-env": "^5.2.0",
     "eventsource-polyfill": "^0.9.6",
     "js-md5": "^0.7.3",

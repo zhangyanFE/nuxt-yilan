@@ -36,7 +36,10 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{
+    src: '~/plugins/util',
+    ssr: true
+  }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -50,6 +53,7 @@ module.exports = {
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
     '@nuxtjs/axios',
+    'cookie-universal-nuxt',
   ],
   /*
     ** Axios module configuration

@@ -15,6 +15,7 @@ const store = () => new Vuex.Store({
       async nuxtServerInit({
         commit
       }, {req, app}) {
+        // console.log(app.$cookies)
         getUrl(req.url);
         const search = new Url(req.url);
         const accessKey = search.get('access_key');
