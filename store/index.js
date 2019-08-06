@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import play from './modules/play'
-import API from '../server/interface/utils/api'
-import Url from '../server/interface/utils/url'
+// import API from '../server/interface/utils/api'
+import Url from '~/plugins/url'
 import {
   getUdid,
   getUid,
   getUrl
-} from '../server/interface/utils/util'
+} from '~/plugins/util'
 
 Vue.use(Vuex)
 

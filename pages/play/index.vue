@@ -11,10 +11,9 @@
 </template>
 
 <script>
-// import { getUdid, getUid } from '~/assets/utils';
 import { mapState } from 'vuex';
-import API from '../../server/interface/utils/api';
-import { distinctArr } from '../../server/interface/utils/util';
+import { distinctArr } from '~/plugins/util';
+import API from '~/server/interface/utils/api';
 import VideoPlayer from '~/components/VideoPlayer';
 import VideoInfo from '~/components/VideoInfo';
 import RecommendTitle from '~/components/RecommendTitle';
