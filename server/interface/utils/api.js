@@ -5,7 +5,7 @@ const request = require('./request');
 
 const openapisUrl = 'https://openapis.yladm.com';
 
-export const API = {
+const API = {
     playVideoApi(data) {
         let req = data;
         const timestamp = new Date() * 1;
