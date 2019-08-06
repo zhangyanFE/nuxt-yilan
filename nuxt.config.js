@@ -22,8 +22,7 @@ module.exports = {
     script: []
   },
   server: {
-    host: '0.0.0.0',
-    port: 5044
+    host: '0.0.0.0'
   },
   /*
    ** Customize the progress-bar color
