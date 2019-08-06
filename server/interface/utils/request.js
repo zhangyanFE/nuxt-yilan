@@ -1,7 +1,8 @@
-import axios from 'axios';
+// import axios from 'axios';
+const axios = require('axios');
 
 // 输出方法
-export default function request(url, data = {}, method = 'post') {
+function request(url, data = {}, method = 'post') {
     // 请求的基本配置
     const service = axios.create({
         baseURL: process.env.API_ROOT, // 接口域名地址
@@ -33,3 +34,5 @@ export default function request(url, data = {}, method = 'post') {
     })
 
 }
+
+module.exports = request;

@@ -18,7 +18,7 @@ function objKeySort(obj) {
 }
 
 /*** 签名算法*/
-export default function genSign(data,isHT='access_token') {
+function genSign(data,isHT='access_token') {
     // console.log(isHT)
     var str = '';
     if (!data || !salt) {
@@ -33,3 +33,5 @@ export default function genSign(data,isHT='access_token') {
     str = str.substr(0, str.length - 1);
     return MD5(str);
 }
+
+module.exports = genSign;
