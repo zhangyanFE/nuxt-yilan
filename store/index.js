@@ -43,8 +43,6 @@ const store = () => new Vuex.Store({
         } = await app.$axios.get('/play/video', {
           params
         })
-        // let { retcode, bitrates } = await API.playVideoApi(params);
-
 
         // 推荐接口
         const {
@@ -56,9 +54,6 @@ const store = () => new Vuex.Store({
           params
         })
 
-        // let { retcode: retcode2, data } = await API.videoRecommendListApi(params);
-
-
         // 广告接口
         const {
           status: status3,
@@ -69,20 +64,11 @@ const store = () => new Vuex.Store({
           params
         })
 
-        // let result = await API.openH5AdApi(params);
-        // let { retcode: retcode3 } = result;
-
         if (status == 200 || status2 == 200 || status3 == 200) {
           commit('play/setList', bitrates);
           commit('play/setRecommendList', data);
           commit('play/setAdInfo', result);
         }
-
-        // if(retcode == 200 || retcode2 == 200 || retcode3 == 200) {
-        //   commit('play/setList', bitrates);
-        //   commit('play/setRecommendList', data);
-        //   commit('play/setAdInfo', result);
-        // }
       } catch (error) {
         console.log(error)
       }
