@@ -45,7 +45,7 @@ const API = {
     openH5AdApi(data) {
         let req = data;
         const timestamp = new Date() * 1;
-        const { access_key, vid, udid, uid } = data;
+        const { access_key, id: vid, udid, uid } = data;
         let signData = {
             access_key,
             timestamp,

@@ -49,7 +49,6 @@ export default {
     },
     mounted() {
         this.init();
-        console.log(this.adInfo)
     },
     methods: {
         init() {
@@ -73,13 +72,13 @@ export default {
                         });
                     });
                     // banner广告数组
-                    // $(`#bannerAd${parseInt(index)}`).html('');
+                    $(`#bannerAd${parseInt(index)}`).html('');
                     this.adBannerListArr = adBannerIdArr;
                 } else if (item.position == "relate") {
                     adListIdArr = item.ad_ids;
                     for(let index = 0; index < adListIdArr.length; index++) {
                     const idElement = item.ad_ids[index];
-                    // $(`#adBox${parseInt((index * item.interval_num + item.first_pos * 1))}`).html('');
+                    $(`#adBox${parseInt((index * item.interval_num + item.first_pos * 1))}`).html('');
                     adList.push({
                         el: `adBox${parseInt((index * item.interval_num + item.first_pos * 1))}`,
                         id: idElement,
@@ -96,7 +95,7 @@ export default {
                     });
                     });
                     // 前贴广告数组
-                    // $(`#vPreAd${parseInt(index)}`).html('');
+                    $(`#vPreAd${parseInt(index)}`).html('');
                     this.adPrepostedListArr = adPrepostedIdArr;
                 }
                 // 广告抄底
