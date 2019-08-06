@@ -1,9 +1,9 @@
 let urlParams = '';
 
-function getUrl(_url) {
+export function getUrl(_url) {
     urlParams =  _url
 }
-const getAddressKey = function(key) { //获取地址栏参数
+export const getAddressKey = function(key) { //获取地址栏参数
     var qsobj = query(urlParams);
     if (qsobj) {
         return qsobj[key] || null;
@@ -12,7 +12,7 @@ const getAddressKey = function(key) { //获取地址栏参数
     }
 }
 
-const query = function(url) { //获取地址栏参数对象集合
+export const query = function(url) { //获取地址栏参数对象集合
     var _url = url ? url : this.url;
     if (_url.indexOf('?') != -1) {
         var qsobj = {};
@@ -33,7 +33,7 @@ const query = function(url) { //获取地址栏参数对象集合
     }
 }
 
-const getUdid = function() {
+export const getUdid = function() {
     let udid = getAddressKey('udid') || ''
     udid = udid.split('/')[0]
     if (!udid) {
@@ -54,7 +54,7 @@ const getUdid = function() {
     return udid
 }
 
-const getUid = function() {
+export const getUid = function() {
     let uid = getAddressKey('uid') || ''
     uid = uid.split('/')[0]
     if (!uid) {
@@ -77,7 +77,7 @@ const getUid = function() {
     return uid
 }
 
-function setCookie(cName, value) {
+export function setCookie(cName, value) {
     let Days = 300
     let exp = new Date()
     exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
@@ -86,7 +86,7 @@ function setCookie(cName, value) {
     }
 }
 
-function getCookie(name) {
+export function getCookie(name) {
     let arr
     let reg = new RegExp('(^| )' + name + '=([^;]*)(;|$)')
     if(process.browser) {
@@ -100,7 +100,7 @@ function getCookie(name) {
     }
 }
 
-function generateSession(n) {
+export function generateSession(n) {
     var words = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
     var nums = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
     var chars = nums.concat(words).concat(words.map(function(s) {
@@ -114,22 +114,22 @@ function generateSession(n) {
     return res
 }
 
-function isWeixin() {
+export function isWeixin() {
     let ua = navigator.userAgent
     return (/micromessenger/.test(ua))
 }
 
-function isAndroid() {
+export function isAndroid() {
     let ua = navigator.userAgent
     return ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1
 }
 
-function isiOS() {
+export function isiOS() {
     let ua = navigator.userAgent
     return !!ua.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
 }
 
-function curClient() {
+export function curClient() {
     let ios = isiOS();
     let android = isAndroid();
     if (ios) {
@@ -142,7 +142,7 @@ function curClient() {
 }
 
 // 判断安卓还是ios
-function platForm() {
+export function platForm() {
     if (curClient() == "iPhone") {
         return "iOS";
     } else if (curClient() == "Android") {
@@ -153,7 +153,7 @@ function platForm() {
 }
 
 //数组去重
-function distinctArr(arr) {
+export function distinctArr(arr) {
     var
         i,
         obj = {},
@@ -168,14 +168,3 @@ function distinctArr(arr) {
     return result;
 }
 // console.log(getCookie('yl_uid'))
-module.exports = {
-    getUrl,
-    getUdid,
-    getUid,
-    setCookie,
-    getCookie,
-    generateSession,
-    platForm,
-    distinctArr,
-    isWeixin,
-}

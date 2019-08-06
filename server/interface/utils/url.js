@@ -77,4 +77,4 @@ Index.prototype = {
     }
 };
 
-module.exports = Index;
+export default Index;

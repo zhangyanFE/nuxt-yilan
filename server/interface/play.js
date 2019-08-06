@@ -1,6 +1,5 @@
 const Router = require('koa-router');
-// import API from './utils/api';
-const API = require('./utils/api');
+import API from './utils/api';
 
 let router = new Router({prefix: '/play'});
 

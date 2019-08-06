@@ -1,5 +1,4 @@
-// import MD5 from 'js-md5';
-const MD5 = require('js-md5');
+import MD5 from 'js-md5';
 
 //加密盐
 var salt = 'Cx2LBrnRAqRsJOhrMMieBu07jvJu3a91';
@@ -18,7 +17,7 @@ function objKeySort(obj) {
 }
 
 /*** 签名算法*/
-function genSign(data,isHT='access_token') {
+export default function genSign(data,isHT='access_token') {
     // console.log(isHT)
     var str = '';
     if (!data || !salt) {
@@ -33,5 +32,3 @@ function genSign(data,isHT='access_token') {
     str = str.substr(0, str.length - 1);
     return MD5(str);
 }
-
-module.exports = genSign;
