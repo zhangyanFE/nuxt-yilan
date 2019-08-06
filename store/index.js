@@ -35,20 +35,6 @@ const store = () => new Vuex.Store({
 
       try {
         // 播放接口
-<<<<<<< HEAD
-        let { retcode, bitrates } = await API.playVideoApi(params);
-
-
-        // 推荐接口
-        let { retcode: retcode2, data } = await API.videoRecommendListApi(params);
-
-
-        // 广告接口
-        let result = await API.openH5AdApi(params);
-        let { retcode: retcode3 } = result;
-
-        if(retcode == 200 || retcode2 == 200 || retcode3 == 200) {
-=======
         const {
           status,
           data: {
@@ -79,7 +65,6 @@ const store = () => new Vuex.Store({
         })
 
         if (status == 200 || status2 == 200 || status3 == 200) {
->>>>>>> d86969f7362502ec658150078292c560b3560014
           commit('play/setList', bitrates);
           commit('play/setRecommendList', data);
           commit('play/setAdInfo', result);
