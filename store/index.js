@@ -35,6 +35,7 @@ const store = () => new Vuex.Store({
 
       try {
         // 播放接口
+<<<<<<< HEAD
         let { retcode, bitrates } = await API.playVideoApi(params);
 
 
@@ -47,6 +48,38 @@ const store = () => new Vuex.Store({
         let { retcode: retcode3 } = result;
 
         if(retcode == 200 || retcode2 == 200 || retcode3 == 200) {
+=======
+        const {
+          status,
+          data: {
+            bitrates
+          }
+        } = await app.$axios.get('/play/video', {
+          params
+        })
+
+        // 推荐接口
+        const {
+          status: status2,
+          data: {
+            data
+          }
+        } = await app.$axios.get('/play/recommendlist', {
+          params
+        })
+
+        // 广告接口
+        const {
+          status: status3,
+          data: {
+            result
+          }
+        } = await app.$axios.get('/play/h5ad', {
+          params
+        })
+
+        if (status == 200 || status2 == 200 || status3 == 200) {
+>>>>>>> d86969f7362502ec658150078292c560b3560014
           commit('play/setList', bitrates);
           commit('play/setRecommendList', data);
           commit('play/setAdInfo', result);
