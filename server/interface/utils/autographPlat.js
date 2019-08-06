@@ -1,5 +1,5 @@
 // import MD5 from 'js-md5';
-const MD5 = require('js-md-5');
+const MD5 = require('js-md5');
 
 //加密盐
 var salt = 'Cx2LBrnRAqRsJOhrMMieBu07jvJu3a91';
