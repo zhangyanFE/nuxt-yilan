@@ -1,5 +1,7 @@
-import Autograph from './autographPlat';
-import request from './request';
+// import Autograph from './autographPlat';
+// import request from './request';
+const Autograph = require('./autographPlat');
+const request = require('./request');
 
 const openapisUrl = 'https://openapis.yladm.com';
 
@@ -67,4 +69,4 @@ export const API = {
     },
 }
 
-export default API;
+module.exports = API;
