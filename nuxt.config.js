@@ -1,3 +1,10 @@
+/*
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-04 06:17:10
+ * @LastEditTime: 2019-08-11 18:06:31
+ * @LastEditors: Please set LastEditors
+ */
 module.exports = {
   mode: 'universal',
   /*
@@ -21,6 +28,9 @@ module.exports = {
     link: [{ rel: 'shortcut icon', type: 'image/x-icon', href: 'https://static.yladm.com/image/favicon.ico' }],
     script: []
   },
+  build: {
+    // transpile: ['vant']
+  },
   server: {
     host: '0.0.0.0'
   },
@@ -31,11 +41,15 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/common.css'],
+  css: [
+    '~assets/css/common.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    '~plugins/vue-vant.js'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
