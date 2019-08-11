@@ -1,30 +1,30 @@
 const state = () => ({
   list: [],
   recommendList: [],
-  adInfo: {},
+  adInfo: {}
 })
 
 const mutations = {
   setList(state, val) {
-    state.list = val;
+    state.list = val
   },
   setRecommendList(state, val) {
-    state.recommendList = val;
+    state.recommendList = val
   },
   setAdInfo(state, val) {
-    state.adInfo = val;
+    state.adInfo = val
   }
 }
 
 const actions = {
   setList: ({ commit }, list) => {
-    commit('setList', list);
+    commit('setList', list)
   },
   setRecommendList: ({ commit }, recommendList) => {
-    commit('setRecommendList', recommendList);
+    commit('setRecommendList', recommendList)
   },
   setAdInfo: ({ commit }, adInfo) => {
-    commit('setAdInfo', adInfo);
+    commit('setAdInfo', adInfo)
   }
 }
 

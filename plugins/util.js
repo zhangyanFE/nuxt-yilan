@@ -1,6 +1,4 @@
-/* eslint-disable no-console */
 /* eslint-disable eqeqeq */
-console.log('服务端')
 let urlParams = ''
 
 export function getUrl(_url) {
