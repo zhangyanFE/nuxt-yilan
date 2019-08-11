@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-09 23:42:55
- * @LastEditTime: 2019-08-11 19:05:21
+ * @LastEditTime: 2019-08-11 19:26:53
  * @LastEditors: Please set LastEditors
  -->
 <template>
@@ -46,8 +46,8 @@
 </template>
 
 <script>
-// import { getUrlParams, sendSpm } from "~/plugins/util";
-import Url from '~/plugins/url'
+// import { getUrlParams, sendSpm } from "~/plugins/util.client";
+import Url from '~/plugins/url.client'
 
 export default {
   name: 'videoList',

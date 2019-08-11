@@ -1,3 +1,10 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-06 13:38:57
+ * @LastEditTime: 2019-08-11 19:18:38
+ * @LastEditors: Please set LastEditors
+ -->
 <template>
     <div class="wrapper">
         <VideoPlayer />
@@ -12,7 +19,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import { distinctArr } from '~/plugins/util';
+import { distinctArr } from '~/plugins/util.client';
 import API from '~/server/interface/utils/api';
 import VideoPlayer from '~/components/VideoPlayer';
 import VideoInfo from '~/components/VideoInfo';

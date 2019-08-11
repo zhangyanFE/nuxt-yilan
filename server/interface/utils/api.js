@@ -2,12 +2,12 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-06 13:38:57
- * @LastEditTime: 2019-08-10 00:04:20
+ * @LastEditTime: 2019-08-11 19:22:21
  * @LastEditors: Please set LastEditors
  */
 import Autograph from './autographPlat';
 import request from './request';
-import { getUdid } from '~/plugins/util';
+// import { getUdid } from '~/plugins/util.server';
 
 const openapisUrl = 'https://openapis.yladm.com';
 

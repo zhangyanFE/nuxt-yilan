@@ -1,13 +1,20 @@
+/*
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-06 13:46:33
+ * @LastEditTime: 2019-08-11 19:21:34
+ * @LastEditors: Please set LastEditors
+ */
 import Vue from 'vue'
 import Vuex from 'vuex'
 import play from './modules/play'
 import API from '~/server/interface/utils/api'
-import Url from '~/plugins/url'
+import Url from '~/plugins/url.client'
 import {
   getUdid,
   getUid,
   getUrl
-} from '~/plugins/util'
+} from '~/plugins/util.server'
 
 Vue.use(Vuex)
 

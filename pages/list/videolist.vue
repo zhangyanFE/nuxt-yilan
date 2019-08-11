@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-09 23:38:52
- * @LastEditTime: 2019-08-10 14:37:35
+ * @LastEditTime: 2019-08-11 19:27:24
  * @LastEditors: Please set LastEditors
  -->
 <template>
@@ -22,7 +22,7 @@
 
 <script>
 import API from '~/server/interface/utils/api';
-import Url from "~/plugins/url";
+import Url from "~/plugins/url.client";
 import VideoList from "./components/videolist";
 export default {
   name: "listPage",

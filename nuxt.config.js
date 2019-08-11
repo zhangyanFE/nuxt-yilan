@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-04 06:17:10
- * @LastEditTime: 2019-08-11 18:06:31
+ * @LastEditTime: 2019-08-11 19:10:36
  * @LastEditors: Please set LastEditors
  */
 module.exports = {
@@ -48,7 +48,9 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [
-    '~plugins/vue-vant.js'
+    '~plugins/vue-vant.js',
+    '~plugins/util.client.js',
+    '~plugins/util.server.js',
   ],
   /*
    ** Nuxt.js dev-modules
