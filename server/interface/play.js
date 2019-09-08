@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable eqeqeq */
 /* eslint-disable camelcase */
-import API from './utils/api'
+const API = './utils/api'
 const Router = require('koa-router')
 
 const router = new Router({ prefix: '/play' })
