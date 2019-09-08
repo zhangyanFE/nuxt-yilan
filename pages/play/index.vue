@@ -27,6 +27,7 @@ import RecommendTitle from '~/components/RecommendTitle';
 import RecommendList from '~/components/RecommendList';
 
 export default {
+    scrollToTop: true,
     data() {
         return {
             

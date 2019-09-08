@@ -7,6 +7,10 @@
  */
 module.exports = {
   mode: 'universal',
+  transition: {
+    name: 'layout',
+    mode: 'out-in'
+  },
   /*
    ** Headers of the page
    */

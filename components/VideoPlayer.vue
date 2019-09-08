@@ -40,7 +40,7 @@ export default {
           url: this.videoSource[2].uri,
           pic: this.getCoverUrl()
         },
-        autoplay: true,
+        // autoplay: true,
         trackLog: true
       })
     }

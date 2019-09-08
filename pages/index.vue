@@ -2,7 +2,12 @@
   <div class="container">
     <div>
       <logo />
-      <h1 class="title">
+      <div style="margin-top: 30px;">
+        <NuxtLink to="/play?id=RnjzlwV8OyVX&preid=RnjzlwV8OyVX&access_key=ylb83s68tq12" style="color: #000;font-size:30px;">
+          跳转播放页
+        </NuxtLink>
+      </div>
+      <!-- <h1 class="title">
         nuxt-yilan
       </h1>
       <h2 class="subtitle">
@@ -19,7 +24,7 @@
         >
           GitHub
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

@@ -1,19 +1,27 @@
+/* eslint-disable import/order */
+/*
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-04 06:17:10
+ * @LastEditTime: 2019-08-11 20:26:52
+ * @LastEditors: Please set LastEditors
+ */
 const Koa = require('koa')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
-const bodyParser = require('koa-bodyparser');
-const json = require('koa-json');
-const play = require('./interface/play');
-
+const bodyParser = require('koa-bodyparser')
+const json = require('koa-json')
+const play = require('./interface/play')
 
 const app = new Koa()
 
 app.proxy = true
-app.use(bodyParser({
-  extendTypes:['json','form','text']
-}))
+app.use(
+  bodyParser({
+    extendTypes: ['json', 'form', 'text']
+  })
+)
 app.use(json())
-
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
@@ -35,7 +43,7 @@ async function start() {
   } else {
     await nuxt.ready()
   }
-  
+
   // Node controller-router
   app.use(play.routes()).use(play.allowedMethods())
 
