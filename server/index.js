@@ -1,11 +1,4 @@
 /* eslint-disable import/order */
-/*
- * @Description: In User Settings Edit
- * @Author: your name
- * @Date: 2019-08-04 06:17:10
- * @LastEditTime: 2019-08-11 20:26:52
- * @LastEditors: Please set LastEditors
- */
 const Koa = require('koa')
 const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')

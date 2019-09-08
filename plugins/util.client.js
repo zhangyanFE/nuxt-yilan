@@ -1,13 +1,8 @@
+/* eslint-disable no-console */
 /* eslint-disable eqeqeq */
-/*
- * @Description: In User Settings Edit
- * @Author: your name
- * @Date: 2019-08-11 19:13:27
- * @LastEditTime: 2019-08-11 20:31:47
- * @LastEditors: Please set LastEditors
- */
+console.log('客户端')
 let urlParams = ''
-// console.log(window)
+
 export function getUrl(_url) {
   urlParams = _url
 }
