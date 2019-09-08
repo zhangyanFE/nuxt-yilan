@@ -13,6 +13,7 @@
     "start2": "nuxt start",
     "start-pre": "nuxt build && nuxt start",
     "start": "cross-env NODE_ENV=production node server/index.js",
+    "deploy": "npm run build && npm run start",
     "generate": "nuxt generate"
   },
   "dependencies": {
