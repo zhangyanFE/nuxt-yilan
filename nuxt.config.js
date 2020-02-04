@@ -5,6 +5,7 @@
  * @LastEditTime: 2019-08-11 20:08:07
  * @LastEditors: Please set LastEditors
  */
+const version = require('./package.json')
 module.exports = {
   mode: 'universal',
   transition: {
@@ -45,7 +46,8 @@ module.exports = {
     // transpile: ['vant']
   },
   server: {
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    port: 3001
   },
   /*
    ** Customize the progress-bar color
@@ -92,6 +94,7 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {},
+    publicPath: `https://static.yladm.com/Transformers/Bruticus/prod/${version}`
   }
 }
